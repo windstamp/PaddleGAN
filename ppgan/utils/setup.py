@@ -37,5 +37,7 @@ def setup(args, cfg):
 
     if paddle.is_compiled_with_cuda():
         paddle.set_device('gpu')
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! gpu')
     else:
         paddle.set_device('cpu')
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! cpu')
