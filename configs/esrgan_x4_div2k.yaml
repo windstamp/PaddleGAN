@@ -111,7 +111,7 @@ optimizer:
 
 validate:
   interval: 5000
-  save_img: false
+  save_img: true
 
   metrics:
     psnr: # metric name, can be arbitrary
