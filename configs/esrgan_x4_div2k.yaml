@@ -38,8 +38,8 @@ export_model:
 dataset:
   train:
     name: SRDataset
-    gt_folder: data/DIV2K/DIV2K_train_HR_sub
-    lq_folder: data/DIV2K/DIV2K_train_LR_bicubic/X4_sub
+    gt_folder: /paddle/datasets/DIV2K/DIV2K_train_HR_sub
+    lq_folder: /paddle/datasets/DIV2K/DIV2K_train_LR_bicubic/X4_sub
     num_workers: 6
     batch_size: 32
     scale: 4
@@ -69,8 +69,8 @@ dataset:
             keys: [image, image]
   test:
     name: SRDataset
-    gt_folder: data/Set14/GTmod12
-    lq_folder: data/Set14/LRbicx4
+    gt_folder: /paddle/datasets/DIV2K/Set14/GTmod12
+    lq_folder: /paddle/datasets/DIV2K/Set14/LRbicx4
     scale: 4
     preprocess:
       - name: LoadImageFromFile
@@ -111,7 +111,7 @@ optimizer:
 
 validate:
   interval: 5000
-  save_img: false
+  save_img: true
 
   metrics:
     psnr: # metric name, can be arbitrary
